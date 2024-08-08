@@ -30,6 +30,7 @@ public class OrganizationServiceImpl  implements OrganizationService {
     public OrganizationDto getOrganizationByCode(String organizationCode) {
 
         Organization organization = organizationRepository.findByOrganizationCode(organizationCode);
+
         return OrganizationMapper.mapToOrganizationDto(organization);
     }
 }
